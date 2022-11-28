@@ -1,0 +1,53 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Agregar tutoria</h3>
+    <form (ngSubmit)="onSumbit()">
+        <div class="form-group">
+            <label>Numero de tutoria : </label>
+            <input type = "number"
+            class = "form-control"
+            id = "numero_tutoria"
+            [(ngModel)] = "tutoria.numero_tutoria"
+            name="numero_tutoria"
+            >
+        </div>
+        <div class="form-group">
+            <label>Nombre Profesor : </label>
+            <input type = "text"
+            class = "form-control"
+            id = "nombre_profesor"
+            [(ngModel)] = "tutoria.nombre_profesor"
+            name="nombre_profesor"
+            >
+        </div>
+        <div class="form-group">
+            <label>Fecha y hora : </label>
+            <input type = "text"
+            class = "form-control"
+            id = "fecha_hora"
+            [(ngModel)] = "tutoria.fecha_hora"
+            name="fecha_hora"
+            >
+        </div>
+        <div class="form-group">
+            <label>Detalles : </label>
+            <input type = "text"
+            class = "form-control"
+            id = "detalles"
+            [(ngModel)] = "tutoria.detalles"
+            name="detalles"
+            >
+        </div>
+        <div class="form-group">
+            <ng-select
+                    bindLabel="name"
+                    placeholder="Select Author"
+                    appendTo="body"
+                    multiple="true"
+                    [(ngModel)]="tutoria.ubicaciones"
+                    name="authors">
+                  </ng-select>
+        </div>
+
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>

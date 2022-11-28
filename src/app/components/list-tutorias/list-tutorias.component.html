@@ -1,0 +1,31 @@
+<h2>Lista tutorias</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Numero tutoria</th>
+            <th>Nombre profesor</th>
+            <th>Fecha y hora</th>
+            <th>Detalles</th>
+            <th>Ubicacion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tutoria of tutorias">
+            <td>{{tutoria.numero_tutoria}}</td>
+            <td>{{tutoria.nombre_profesor}}</td>
+            <td>{{tutoria.fecha_hora}}</td>
+            <td>{{tutoria.detalles}}</td>
+            <td>
+                <tr *ngFor="let ubi of tutoria.ubicaciones">{{ubi.code}}</tr>
+            </td>
+            <td>
+                <button class="btn btn-info btn-sm">Editar</button>
+                &nbsp;
+                <button class='btn btn-danger btn-sm' (click)="deleteTutoria(tutoria.numero_tutoria)" >
+                    Delete</button>
+                </td>
+        </tr>
+    </tbody>
+</table>
