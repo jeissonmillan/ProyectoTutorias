@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Agregar ubicacion</h3>
+    <form (ngSubmit)="onSumbit()">
+        <div class="form-group">
+            <label>Codigo : </label>
+            <input type = "number"
+            class = "form-control"
+            id = "code"
+            [(ngModel)] = "ubicacion.code"
+            name="code"
+            >
+        </div>
+        <div class="form-group">
+            <label>Salon : </label>
+            <input type = "text"
+            class = "form-control"
+            id = "salon"
+            [(ngModel)] = "ubicacion.salon"
+            name="salon"
+            >
+        </div>
+        <div class="form-group">
+            <label>Detalles : </label>
+            <input type = "text"
+            class = "form-control"
+            id = "detalles"
+            [(ngModel)] = "ubicacion.detalles"
+            name="detalles"
+            >
+        </div>
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>
